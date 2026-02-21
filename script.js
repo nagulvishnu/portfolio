@@ -90,68 +90,208 @@ window.addEventListener('scroll', () => {
 document.getElementById('download-resume').addEventListener('click', function(e) {
     e.preventDefault();
     
-    // Create a simple text resume for download
+    // Create a professional PDF-style resume content
     const resumeContent = `
-NAGUL VISHNU E
-Java Developer | IT Student
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nagul Vishnu E - Resume</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; color: #333; }
+        .header { text-align: center; border-bottom: 2px solid #2563eb; padding-bottom: 20px; margin-bottom: 30px; }
+        .name { font-size: 28px; font-weight: bold; color: #2563eb; margin-bottom: 10px; }
+        .title { font-size: 18px; color: #64748b; margin-bottom: 10px; }
+        .contact { font-size: 14px; margin-bottom: 5px; }
+        .section { margin-bottom: 25px; }
+        .section-title { font-size: 20px; font-weight: bold; color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 15px; }
+        .item { margin-bottom: 15px; }
+        .item-title { font-weight: bold; font-size: 16px; }
+        .item-subtitle { font-style: italic; color: #64748b; font-size: 14px; }
+        .item-date { font-weight: bold; color: #2563eb; font-size: 14px; }
+        .item-description { margin-top: 5px; font-size: 14px; }
+        ul { margin: 10px 0; padding-left: 20px; }
+        li { margin-bottom: 5px; font-size: 14px; }
+        .skills { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
+        .skill { background: #f1f5f9; padding: 5px 10px; border-radius: 5px; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="name">NAGUL VISHNU E</div>
+        <div class="title">Java Developer | IT Student</div>
+        <div class="contact">📧 nagulvishnue@gmail.com | 📱 +91 6381613749</div>
+        <div class="contact">🔗 github.com/nagulvishnu | 🔗 linkedin.com/in/nagul-vishnu-46174331a</div>
+        <div class="contact">📍 Chennai, India</div>
+    </div>
 
-CONTACT INFORMATION
-Email: nagulvishnue@gmail.com
-Phone: +91 6381613749
-GitHub: https://github.com/nagulvishnu
-LinkedIn: https://linkedin.com/in/nagul-vishnu-46174331a
-Location: Chennai, India
+    <div class="section">
+        <div class="section-title">PROFESSIONAL SUMMARY</div>
+        <div class="item-description">
+            IT student with strong basics in Core Java and OOP concepts. Familiar with Spring Boot and REST API development. 
+            Eager to start my career as a Java Developer and grow in backend technologies.
+        </div>
+    </div>
 
-PROFESSIONAL SUMMARY
-IT student with strong basics in Core Java and OOP concepts. Familiar with Spring Boot and REST API development. Eager to start my career as a Java Developer and grow in backend technologies.
+    <div class="section">
+        <div class="section-title">EDUCATION</div>
+        <div class="item">
+            <div class="item-title">B.Tech Information Technology</div>
+            <div class="item-subtitle">Panimalar Engineering College</div>
+            <div class="item-date">2023 – 2027 | CGPA: 8.92</div>
+            <div class="item-description">
+                Currently pursuing Bachelor's degree in Information Technology with focus on software development, 
+                programming languages, and database management.
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-title">12th Grade</div>
+            <div class="item-subtitle">Dr. Vimala Convent Mat Hr Sec School</div>
+            <div class="item-date">2022 – 2023 | Percentage: 87%</div>
+            <div class="item-description">
+                Completed higher secondary education with strong foundation in Mathematics, Computer Science, and Science subjects.
+            </div>
+        </div>
+    </div>
 
-EDUCATION
-B.Tech Information Technology | Panimalar Engineering College | 2023–2027
-12th Grade | Dr. Vimala Convent Mat Hr Sec School | 2022–2023
+    <div class="section">
+        <div class="section-title">SKILLS</div>
+        <div class="item">
+            <div class="item-title">Languages:</div>
+            <div class="skills">
+                <span class="skill">Java</span>
+                <span class="skill">Python</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-title">Database:</div>
+            <div class="skills">
+                <span class="skill">SQL</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-title">Frontend:</div>
+            <div class="skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-title">Tools:</div>
+            <div class="skills">
+                <span class="skill">Git</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">VS Code</span>
+                <span class="skill">Eclipse</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-title">Core:</div>
+            <div class="skills">
+                <span class="skill">Data Structures & Algorithms</span>
+                <span class="skill">OOP</span>
+                <span class="skill">Problem Solving</span>
+            </div>
+        </div>
+    </div>
 
-SKILLS
-Languages: Java, Python
-Database: SQL
-Frontend: HTML, CSS, JavaScript
-Tools: Git, GitHub, VS Code
-Core: Data Structures & Algorithms, OOP, Problem Solving
+    <div class="section">
+        <div class="section-title">PROJECTS</div>
+        <div class="item">
+            <div class="item-title">Recipe API - Full-Stack Web Application</div>
+            <div class="item-subtitle">Technologies: Spring Boot, React, Oracle, JPA/Hibernate, Tailwind CSS</div>
+            <div class="item-description">
+                Comprehensive Recipe Management System with Spring Boot backend and React frontend, handling 8,451+ recipes 
+                with enterprise-grade performance.
+            </div>
+            <ul>
+                <li>Pagination system handling 704+ pages with customizable sizes</li>
+                <li>Real-time search with filtering by title and cuisine</li>
+                <li>Batch processing (100 records/batch) for optimal performance</li>
+                <li>Responsive UI with recipe cards and nutritional info</li>
+                <li>RESTful API design with CORS and error handling</li>
+            </ul>
+        </div>
+        <div class="item">
+            <div class="item-title">Task Management System</div>
+            <div class="item-subtitle">Technologies: Spring Boot, Java 17, JPA/Hibernate, H2/MySQL, Vanilla JavaScript</div>
+            <div class="item-description">
+                Robust Full-Stack Task Management Application with Spring Boot backend and responsive SPA frontend, 
+                featuring complete CRUD operations and real-time interactions.
+            </div>
+            <ul>
+                <li>Complete CRUD operations with validation</li>
+                <li>Search functionality with pagination</li>
+                <li>Global exception handling with meaningful responses</li>
+                <li>Automatic auditing with timestamps</li>
+                <li>Swagger UI integration for API documentation</li>
+            </ul>
+        </div>
+        <div class="item">
+            <div class="item-title">Quiz Website</div>
+            <div class="item-subtitle">Technologies: HTML, CSS, JavaScript</div>
+            <div class="item-description">
+                Interactive quiz website featuring dynamic questions, real-time scoring, and immediate feedback.
+            </div>
+            <ul>
+                <li>Dynamic question loading</li>
+                <li>Instant score display</li>
+                <li>Responsive design</li>
+            </ul>
+        </div>
+    </div>
 
-PROJECTS
-Quiz Website
-Technologies: HTML, CSS, JavaScript
-Description: Interactive quiz with dynamic questions and instant score display.
+    <div class="section">
+        <div class="section-title">EXPERIENCE</div>
+        <div class="item">
+            <div class="item-title">Web Development Intern</div>
+            <div class="item-subtitle">JB Soft System</div>
+            <div class="item-date">May 2024 – June 2024</div>
+            <ul>
+                <li>Updated live web pages with gold rates, fish and vegetable prices</li>
+                <li>Developed a dynamic website using WordPress</li>
+                <li>Worked with responsive design principles</li>
+                <li>Collaborated with senior developers to implement new features</li>
+            </ul>
+        </div>
+    </div>
 
-SafeWay – Women Safety App (In Progress)
-Technologies: Flutter, Dart, Firebase (Auth, Firestore, Cloud Storage), FCM, Geolocation APIs
-Description: Real-time rescue app for SOS alerts with audio/video and volunteer notifications.
-
-EXPERIENCE
-Web Development Intern | JB Soft System | May 2024 – June 2024
-- Updated live web pages with gold rates, fish and vegetable prices
-- Developed a dynamic website using WordPress
-- Worked with responsive design principles
-- Collaborated with senior developers to implement new features
-
-CERTIFICATES
-- NASSCOM – Cybersecurity Analysis and Design
-- NPTEL – Programming in Java
-- NPTEL – Database Management System
-- Typewriting – English (Lower / Higher)
+    <div class="section">
+        <div class="section-title">CERTIFICATES</div>
+        <div class="item">
+            <div class="item-title">• Cybersecurity Analysis and Design</div>
+            <div class="item-subtitle">NASSCOM</div>
+        </div>
+        <div class="item">
+            <div class="item-title">• Programming in Java</div>
+            <div class="item-subtitle">NPTEL</div>
+        </div>
+        <div class="item">
+            <div class="item-title">• Database Management System</div>
+            <div class="item-subtitle">NPTEL</div>
+        </div>
+        <div class="item">
+            <div class="item-title">• Typewriting – English (Lower / Higher)</div>
+        </div>
+    </div>
+</body>
+</html>
 `;
 
-    // Create blob and download
-    const blob = new Blob([resumeContent], { type: 'text/plain' });
+    // Create blob and download as HTML file (can be saved as PDF from browser)
+    const blob = new Blob([resumeContent], { type: 'text/html' });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'Nagul_Vishnu_Resume.txt';
+    a.download = 'Nagul_Vishnu_Resume.html';
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);
     document.body.removeChild(a);
     
-    // Show success message
-    showNotification('Resume downloaded successfully!');
+    // Show enhanced notification with PDF instructions
+    showNotification('Resume downloaded! Open the file and "Save as PDF" for professional format.');
 });
 
 // Notification System
